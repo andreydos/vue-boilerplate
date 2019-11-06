@@ -1,0 +1,67 @@
+@import "mixins";
+@import "variables";
+@import "normalize";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+// scroll bar
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+  @include mobile {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(22, 38, 59, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(63, 99, 139, 0.1);
+}
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  @include fluid-font();
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.muted-opacity {
+  opacity: 0.5;
+}
+
+.cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 1.2em;
+  white-space: nowrap;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
